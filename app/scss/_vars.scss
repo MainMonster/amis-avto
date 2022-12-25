@@ -1,0 +1,22 @@
+$color-text: rgba(220, 220, 224, 0.6);
+$color-decor: #ff550b;
+
+%font-title {
+  font-family: "Days One", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #000;
+}
+%font-text {
+  font-family: "Mako", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+}
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
