@@ -8,10 +8,15 @@ $(function () {
   });
 });
 
-const btnShowMoreCategory = document.querySelector(".btn-more");
-const hiddenClass = document.querySelector(".category__list-hidden");
-const showClass = document.querySelector(".btn-hide");
+const btnShowMore = document.querySelector(".btn-more");
+const classHidden = document.querySelector(".category__list-hidden");
 
-btnShowMoreCategory.addEventListener("click", function () {
-  hiddenClass.classList.toggle("category__list-hidden");
+btnShowMore.addEventListener("click", function () {
+  classHidden.classList.toggle("category__list-hidden");
+
+  //   if (classHidden.classList.toggle("category__list-hidden")) {
+  //     btnShowMore.textContent = "Показать контент";
+  //   } else {
+  //     btnShowMore.textContent = "Скрыть контент";
+  //   }
 });

@@ -139,15 +139,32 @@
   justify-content: space-between;
   margin-top: 50px;
 }
-.catalog {
-  width: 300px;
-}
+
 .cards {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 900px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+  }
+}
+.btn-disp {
   display: flex;
-  justify-content: space-between;
-  width: 900px;
-  flex-wrap: wrap;
-  margin-bottom: 50px;
+  justify-content: flex-end;
+  margin-right: 15px;
+
+  &__tile {
+    width: 20px;
+    height: 20px;
+    background-color: #ff5f19;
+    margin-right: 5px;
+  }
+  &__string {
+    width: 20px;
+    height: 20px;
+    background-color: orange;
+  }
 }
 
 .card {
@@ -178,7 +195,7 @@
     color: #ffffff;
     padding: 2px 15px;
     margin: 10px 15px;
-	 position:absolute;
+    position: sticky;
   }
   &__order--available {
     background: rgba(101, 183, 100, 1);
@@ -239,11 +256,13 @@
 // Начало формы
 
 .catalog {
+  width: 300px;
+  height: 100%;
   &__inner {
     background: #f1f1f5;
     border: 1px solid #f7f2f2;
     border-radius: 4px;
-    height: 100vh;
+    height: 100%;
   }
 }
 
@@ -342,32 +361,6 @@
     left: 23%;
     transform: translate(-50%, -50%);
     background-image: url(../images/icons/show-more-btn.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-}
-.btn-hide {
-  display: none;
-  margin: 0 auto;
-  text-align: center;
-  //   border: 1px solid #ff5f19;
-  padding: 10px 75px;
-  color: #545454;
-  background-color: #e4e4e7;
-  width: 255px;
-  position: relative;
-  &:hover {
-    opacity: 0.8;
-    color: aqua;
-  }
-  &::before {
-    content: "Скрыть";
-    position: absolute;
-    width: 18px;
-    height: 18px;
-    top: 50%;
-    left: 23%;
-    transform: translate(-50%, -50%);
     background-repeat: no-repeat;
     background-size: contain;
   }
@@ -496,7 +489,44 @@
 //  форма конец
 
 // end sidebar //
+//пагинация
 
+.pagination {
+  display: flex;
+  justify-content: center;
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__list {
+    display: flex;
+  }
+  &__list-item {
+    margin: 0 6px;
+  }
+  &__arrow {
+    margin: 0 6px;
+  }
+  &__arrow--disabled {
+    opacity: 0;
+    pointer-events: none;
+  }
+  &__list-num {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 28px;
+    color: #707070;
+  }
+  &__list-num--activ {
+    color: $color-decor;
+    pointer-events: none;
+  }
+}
+
+//end пагинация
+//footer start
 .footer {
   background-color: #f1f1f5;
   &__wrapper {
