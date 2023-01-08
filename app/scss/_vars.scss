@@ -2,10 +2,20 @@ $color-text: rgba(220, 220, 224, 0.6);
 $color-decor: #ff550b;
 
 %font-title {
-  font-family: "Days One", sans-serif;
+  font-family: "Days", sans-serif;
   font-style: normal;
   font-weight: 400;
   color: #000;
+}
+%font-h1 {
+  font-family: "Days";
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 41px;
+  color: #ff5f19;
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 40px;
 }
 %font-text {
   font-family: "Mako", sans-serif;
