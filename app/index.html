@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
-    <meta charset="UTF-8" />
+   
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AmisAvto</title>
@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css?family=Mako:regular"
       rel="stylesheet"
     />
-  </head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
   <body>
     <div class="contacts-decor"></div>
     <header class="header">
@@ -73,8 +73,8 @@
                 </div>
               </div>
             </div>
-            <nav class="menu">
-              <ul class="menu__list">
+            <nav id="navbar" class="menu">
+              <ul class="menu__list" >
                 <li class="menu__list-item">
                   <a class="menu__link" href="#">Главная</a>
                 </li>
@@ -136,7 +136,7 @@
 
 
 						<div class="catalog__category category">
-							<h3 class="category__title"> Категории запчастей</h3>
+					    <h3 class="category__title"> Категории запчастей</h3>
 							<ul class="category__list">
 								<li class="category__item"><a href="#" class="category__link">двигатель</a></li>
 								<li class="category__item"><a href="#" class="category__link">мкпп</a></li>
@@ -169,7 +169,7 @@
 								<li class="category__item"><a href="#" class="category__link">КОЖУХ МАХОВИКА</a></li>
 							</div>	
 							</ul>
-							<button class="btn-more">Показать еще</button>
+							<a class="btn-more">Показать еще</a>
 							
 
 							
@@ -247,7 +247,7 @@
 						</div>
 						<div class="card__content">
 
-							<div class="card__category">двигатель</div>
+					    <div class="card__category">двигатель</div>
 							<div class="card__brand">mazda familia</div>
 							<div class="card__model">кузов.........BF7P</div>
 							<div class="card__stamp">Двигатель.....PN</div>
@@ -267,7 +267,7 @@
 							</div>
 							<div class="card__content">
 	
-								<div class="card__category">двигатель</div>
+						    <div class="card__category">двигатель</div>
 								<div class="card__brand">mazda familia</div>
 								<div class="card__model">кузов.........BF7P</div>
 								<div class="card__stamp">Двигатель.....PN</div>
@@ -287,7 +287,7 @@
 								</div>
 								<div class="card__content">
 		
-									<div class="card__category">двигатель</div>
+							    <div class="card__category">двигатель</div>
 									<div class="card__brand">mazda familia</div>
 									<div class="card__model">кузов.........BF7P</div>
 									<div class="card__stamp">Двигатель.....PN</div>
@@ -307,7 +307,7 @@
 									</div>
 									<div class="card__content">
 			
-										<div class="card__category">двигатель</div>
+								    <div class="card__category">двигатель</div>
 										<div class="card__brand">mazda familia</div>
 										<div class="card__model">кузов.........BF7P</div>
 										<div class="card__stamp">Двигатель.....PN</div>
@@ -327,7 +327,7 @@
 										</div>
 										<div class="card__content">
 				
-											<div class="card__category">двигатель</div>
+									    <div class="card__category">двигатель</div>
 											<div class="card__brand">mazda familia</div>
 											<div class="card__model">кузов.........BF7P</div>
 											<div class="card__stamp">Двигатель.....PN</div>
@@ -347,7 +347,7 @@
 											</div>
 											<div class="card__content">
 					
-												<div class="card__category">двигатель</div>
+										    <div class="card__category">двигатель</div>
 												<div class="card__brand">mazda familia</div>
 												<div class="card__model">кузов.........BF7P</div>
 												<div class="card__stamp">Двигатель.....PN</div>
@@ -367,7 +367,7 @@
 							</div>
 							<div class="card__content">
 	
-								<div class="card__category">двигатель</div>
+						    <div class="card__category">двигатель</div>
 								<div class="card__brand">mazda familia</div>
 								<div class="card__model">кузов.........BF7P</div>
 								<div class="card__stamp">Двигатель.....PN</div>
@@ -387,7 +387,7 @@
 								</div>
 								<div class="card__content">
 		
-									<div class="card__category">двигатель</div>
+							    <div class="card__category">двигатель</div>
 									<div class="card__brand">mazda familia</div>
 									<div class="card__model">кузов.........BF7P</div>
 									<div class="card__stamp">Двигатель.....PN</div>
@@ -407,7 +407,7 @@
 									</div>
 									<div class="card__content">
 			
-										<div class="card__category">двигатель</div>
+								    <div class="card__category">двигатель</div>
 										<div class="card__brand">mazda familia</div>
 										<div class="card__model">кузов.........BF7P</div>
 										<div class="card__stamp">Двигатель.....PN</div>
@@ -462,7 +462,7 @@
 			</div>
 			<!-- Раздел о Компании -->
 			<section class="company" id="company">
-				<h1 class="company__title">о компании</h1>
+				<h1 class="company__title anim__title">о компании</h1>
 				<div class="company__text">
 					<p>Компания "Амис-Авто" существует на рынке запчастей Дальнего Востока более 10 лет и специализируется преимущественно на поставках из Японии дизельных двигателей в сборе, первой комплектации, со всем навесным оборудованием, коробка (МКПП), стартер, генератор, ТНВД.
 					</p>
@@ -482,37 +482,32 @@
 			</section>
 			<!-- Раздел услуги -->
 			<section class="services" id="services">
-				<h1 class="services__title">
+				<h1 class="services__title anim__title">
 					Услуги
 				</h1>
-				<div class="services__wrapper ">
-					<div class="card-service">
-						<img class="card-service__img"
-						 src="images/icons/services/doc.svg" alt="doc">
+				<div class="services__wrapper">
+					<div class="card-service box">
+					
 						 <div class="card-service__title">Оформление документов</div>
 						 <div class="card-service__text">Вся необходимая сопроводительная документация</div>
 					</div>
-					<div class="card-service">
-						<img class="card-service__img"
-						 src="images/icons/services/agent.svg" alt="agent">
+					<div class="card-service box">
+						
 						 <div class="card-service__title">АГЕНТСКИЕ УСЛУГИ</div>
 						 <div class="card-service__text">Таможенное декларирование авто и спецтехники</div>
 					</div>
-					<div class="card-service">
-						<img class="card-service__img"
-						 src="images/icons/services/buy.svg" alt="buy">
+					<div class="card-service box">
+						
 						 <div class="card-service__title">ПОКУПКА НА АУКЦИОНАХ</div>
 						 <div class="card-service__text">Покупка через аукционы Японии, легковых автомобилей и грузовой техники</div>
 					</div>
-					<div class="card-service">
-						<img class="card-service__img"
-						 src="images/icons/services/safety.svg" alt="safety">
+					<div class="card-service box">
+						
 						 <div class="card-service__title">БЕЗОПАСНОСТЬ</div>
 						 <div class="card-service__text">Транспортировка с таможенных складов эвакуаторами под охраной</div>
 					</div>
-					<div class="card-service">
-						<img class="card-service__img"
-						 src="images/icons/services/cash.svg" alt="cash">
+					<div class="card-service box">
+						
 						 <div class="card-service__title">ЛЮБАЯ ФОРМА ОПЛАТЫ</div>
 						 <div class="card-service__text">
 							<ul class="card-service__text">
@@ -523,9 +518,8 @@
 							
 							</div>
 					</div>
-					<div class="card-service">
-						<img class="card-service__img"
-						 src="images/icons/services/delivery.svg" alt="truck">
+					<div class="card-service box">
+						
 						 <div class="card-service__title">ГЕОГРАФИЯ</div>
 						 <div class="card-service__text">Доставка по России  через Желдорэкспедицию http://www.jde.ru/ или Деловые линии http://www.dellin.ru/ с оплатой доставки на месте  получения груза. </div>
 					</div>
@@ -533,7 +527,7 @@
 			</section>
 			<!-- Раздел Декларирование -->
 			<section class="declaring" id="declar">
-				<h1 class="declaring__title">Таможенное декларирование</h1>
+				<h1 class="declaring__title anim__title">Таможенное декларирование</h1>
 				<div class="declaring__text">
 					<p>Компания ООО «Амис-Авто» уже более 10-ти лет работает на внешнеэкономическом рынке. Нас знают во Владивостоке, Хабаровске, Иркутске, Амурской и Новосибирской областях, а также в других регионах РФ, где компания ведет активную работу по продаже запчастей и двигателей для большегрузных и легковых автомобилей. Всю информацию об имеющемся ассортименте запчастей вы можете посмотреть в разделе КАТАЛОГ.</p>
 					<p>ООО «Амис-Авто» является крупным контрактодержателем, занимается ввозом автомобильной техники на территорию Российской Федерации. Многие наши клиенты самостоятельно привозят автомобили, а мы помогаем им быстро и недорого оформить таможенные и сопутствующие документы. Это позволяет значительно ускорить процесс выхода автомобилей на дороги и рынки России.</p>	
@@ -551,8 +545,6 @@
 				</div>
 
 			</section>
-
-
 			<!-- truck Декор -->
 			<div class="truck">
 				<div class="truck__img-container"><img  class="truck__img" src="images/truck.jpg" alt="truck">

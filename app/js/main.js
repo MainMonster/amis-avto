@@ -37,3 +37,15 @@ $(document).ready(function () {
     $("body,html").animate({ scrollTop: top }, 1500);
   });
 });
+
+// Фиксированное меню
+
+window.addEventListener("scroll", (e) => {
+  let navbar = document.getElementById("navbar").classList;
+  let active_class = "menu_scrolled";
+  let active_menu_link = "menu__link-scrolled";
+
+  //   Появление при условии высоты экрана 1400px
+  if (pageYOffset > 1400) navbar.add(active_class, active_menu_link);
+  else navbar.remove(active_class, active_menu_link);
+});

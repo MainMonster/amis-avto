@@ -5,7 +5,7 @@ $color-decor: #ff550b;
   font-family: "Days", sans-serif;
   font-style: normal;
   font-weight: 400;
-  color: #000;
+  color: inherit;
 }
 %font-h1 {
   font-family: "Days";
@@ -21,7 +21,7 @@ $color-decor: #ff550b;
   font-family: "Mako", sans-serif;
   font-style: normal;
   font-weight: 400;
-  color: #000000;
+  color: inherit;
 }
 
 @function max($numbers...) {
