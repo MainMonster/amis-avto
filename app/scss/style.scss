@@ -3,6 +3,7 @@
 @import "reset";
 @import "libs";
 @import "global";
+@import "media";
 
 .contacts-decor {
   background-color: rgba(220, 220, 224, 0.6);
@@ -10,7 +11,7 @@
   margin-bottom: -100px;
   width: initial;
   height: 100px;
-  margin-left: 30%;
+  margin-left: 30vh;
 }
 .header {
   //   position: relative;
@@ -36,6 +37,7 @@
   }
 
   .contact-header {
+    margin-bottom: 30px;
     &__item {
       padding: 0px 0px 0px 34px;
       margin-left: 30px;
@@ -82,28 +84,30 @@
 }
 .menu {
   //   position: fixed;
-  //   top: 20px;
+  top: 0px;
   //   width: 100px;
-  margin-top: 55px;
+  // margin-top: 55px;
   //   justify-content: space-between;
   transition: all 0.3s ease-in-out;
   &_scrolled {
     position: fixed;
     animation-name: fadeInUp;
     animation-duration: 1s;
-    margin: 0px auto;
-    padding: 10px;
-    top: 10px;
-    left: 10px;
-    width: 250px;
+    //  margin: 0px auto;
+    //  padding: 10px;
+    //  top: 10px;
+    //  left: 10px;
+    //  width: 250px;
   }
 
   &__list {
     display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
   }
   &__list-item {
-    margin-right: 30px;
+    margin-right: 20px;
+    margin-left: 20px;
   }
 
   &__link {
@@ -113,7 +117,7 @@
     font-weight: 400;
     text-transform: uppercase;
     font-size: 20px;
-    line-height: 25px;
+    line-height: 40px;
     position: relative;
     &::before {
       content: "";
@@ -135,23 +139,23 @@
       background-color: #ff550b;
       color: #fff;
       align-items: center;
-      height: 30%;
       line-height: 50px;
     }
   }
 }
 .top {
   &__slider {
+    max-width: 100%;
   }
   &__slider slick-dots {
   }
-
-  &__slider-item {
-  }
-  &__slider-img {
-    max-width: 100%;
-  }
 }
+.top__slider-img {
+  max-width: 100%;
+  display: block;
+  object-fit: contain;
+}
+
 .slick-dots {
   position: absolute;
   left: 20px;
@@ -188,7 +192,7 @@
     justify-content: space-between;
     width: 900px;
     flex-wrap: wrap;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
   }
   &__wrappers {
     background-color: aqua;
@@ -201,11 +205,11 @@
 
 .card {
   box-shadow: 0px 4px 60px rgba(133, 133, 133, 0.49);
-  border-radius: 10px;
+  border-radius: 5px;
   background-color: #fcfbfb;
   width: 270px;
   height: 300px;
-  margin: 10px;
+  margin: 15px 15px 40px 15px;
 
   &__link {
     transition: all 0.3s ease;
@@ -288,53 +292,53 @@
 // Начало формы
 
 .catalog {
-  width: 300px;
-  height: 100%;
+  display: flex;
 
   &__inner {
     background: #f1f1f5;
     border: 1px solid #f7f2f2;
     border-radius: 4px;
+    margin: 15px 0;
+    width: 300px;
   }
-}
 
-.form-search {
-  margin: 20px;
-  &__text {
-    padding: 10px 50px 10px 10px;
-    background-color: #fff;
-    border: 0.5px solid #a7a7a7;
-    border-radius: 4px;
-    width: 100%;
-    height: 40px;
-    font-family: "Mako";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 10px;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: #5c5c5c;
+  .form-search {
+    margin: 20px;
+    &__text {
+      padding: 10px 50px 10px 10px;
+      background-color: #fff;
+      border: 0.5px solid #a7a7a7;
+      border-radius: 4px;
+      width: 100%;
+      height: 40px;
+      font-family: "Mako";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 10px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #5c5c5c;
+    }
+    &__icon {
+      position: relative;
+    }
+    &__icon::after {
+      content: "";
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      transform: translateY(-50%);
+      display: block;
+      width: 20px;
+      height: 20px;
+      pointer-events: none;
+      background: url(../images/icons/search.svg) 95% 50% no-repeat;
+    }
   }
-  &__icon {
-    position: relative;
-  }
-  &__icon::after {
-    content: "";
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    transform: translateY(-50%);
-    display: block;
-    width: 20px;
-    height: 20px;
-    pointer-events: none;
-    background: url(../images/icons/search.svg) 95% 50% no-repeat;
+  .form-search__text:focus {
+    outline: none;
   }
 }
-.form-search__text:focus {
-  outline: none;
-}
-
 // Категории
 .catalog__category {
 }
@@ -350,6 +354,10 @@
     margin-left: 20px;
   }
   &__list {
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: hsl(0 0% 50%);
+    max-height: 500px;
   }
   &__item {
     padding-left: 50px;
@@ -515,7 +523,65 @@
     color: #fff;
   }
 }
+// Форма обратной связи
 
+.send-form__title {
+  font-family: "Mali";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ff550b;
+  text-align: center;
+  padding: 20px 10px;
+}
+.send-form {
+  margin: 20px;
+
+  &__name,
+  &__phone,
+  &__text {
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 10px 50px 10px 10px;
+    background-color: #fff;
+    border: 0.5px solid #a7a7a7;
+    border-radius: 4px;
+    width: 100%;
+    font-family: "Mako";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #5c5c5c;
+  }
+
+  &__name::placeholder,
+  &__phone::placeholder {
+    @extend %font-text;
+  }
+}
+.send-btn {
+  @extend %font-text;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #000;
+  border: 2px solid #ff5f19;
+  padding: 5px 95px;
+  margin: 0 auto;
+  width: 258px;
+  transition: all 0.3 ease;
+  &:hover {
+    background-color: #ff5f19;
+    color: #fff;
+  }
+}
+// Конец формы обратной связи
 //  форма конец
 
 // end sidebar //
@@ -609,13 +675,6 @@
   padding: 40px;
   position: relative;
 
-  &__img {
-    display: none;
-    height: 50px;
-    width: 100px;
-    margin: 0 auto;
-    margin-bottom: 20px;
-  }
   &__title {
     @extend %font-title;
     font-size: 18px;
@@ -725,7 +784,7 @@
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    top: -50px;
+    top: -10px;
   }
   to {
     opacity: 1;
@@ -741,5 +800,11 @@
   100% {
     opacity: 1;
     left: 0;
+  }
+}
+
+@media (max-width: 1240px) {
+  .catalog {
+    display: none;
   }
 }

@@ -30,3 +30,6 @@ $color-decor: #ff550b;
 @function min($numbers...) {
   @return m#{a}x(#{$numbers});
 }
+
+%btn {
+}
