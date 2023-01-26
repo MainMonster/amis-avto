@@ -19,9 +19,12 @@
           <a href="#"
             ><img class="header__logo" src="images/logo.jpg" alt="logo"
           /></a>
-
+					
           <div class="header__inner">
-            <div class="header__contacts">
+		<button class="menu__btn">
+						<span></span>
+					</button>
+            <div class="header__contacts ">
               <div class="header__column">
                 <div class="contact-header">
                   <a
@@ -44,7 +47,8 @@
                     class="contact-header__item contact-header__item-location"
                     href="#"
                   >
-                    г. Владивосток, Бородинская, 14
+                    г. Владивосток,
+						  <br> Бородинская, 14
                   </a>
                 </div>
                 <div class="header__row">
@@ -64,16 +68,18 @@
                 </div>
               </div>
               <div class="header__column">
-                <div class="">
+                <div class="header__row">
                   <a
-                    class="contact-header__item contact-header__item-dwn btn__download"
+                    class="contact-header__item btn__download"
                     href="#"
                     >Скачать прайс</a
                   >
                 </div>
               </div>
             </div>
-            <nav id="navbar" class="menu">
+				
+            <nav id="navbar" class="menu ">
+					
               <ul class="menu__list" >
                 <li class="menu__list-item">
                   <a class="menu__link" href="#">Главная</a>
@@ -123,7 +129,7 @@
 			<!-- Начало основной части -->
 			 <div class="main">
 			 <!--	Выбор запчасти, каталог -->
-				<aside class="catalog">
+				<aside class="catalog  hide-aside">
 					<div class="catalog__inner">
 						
 						<form>
@@ -635,39 +641,31 @@
         </div>
         <div class="footer__inner">
 			
-				<div class="header__column">
-				  <div class="header__row contact-header">
-					 <a
-						class="contact-header__item contact-header__item-phone"
-						href="tel:89025575565"
-						>8-902-557-55-65</a
-					 >
-				   <a
-						class="contact-header__item contact-header__item-whatsupp"
-						href="tel:"
-						>8-904-629-98-52</a
-					 >
-					 <a
-						class="contact-header__item contact-header__item-location"
-						href="#"
-					 >
-						г. Владивосток, Бородинская, 14
-					 </a>
-				 
-					 <a
-						class="contact-header__item contact-header__item-email"
-						href="mailto:amisavto@mail.ru"
-						>amisavto@mail.ru</a
-					 >
-				  </div>
-				</div>
+				<nav class="footer__menu menu-footer">
+				  <ul class="footer-menu__list">
+					 <li class="footer-menu__list-item">
+						<a class="footer-menu__link" href="tel:89025575565">8-902-557-55-65</a>
+					 </li>
+					 <li class="footer-menu__list-item">
+						<a class="footer-menu__link" href="https://wa.me/89046299852">8-904-629-98-52</a>
+					 </li>
+					 <li class="footer-menu__list-item">
+						<a class="footer-menu__link" href="#">г. Владивосток, <br> Бородинская, 14</a>
+					 </li>
+					 <li class="footer-menu__list-item">
+						<a class="footer-menu__link" href="#">Схема проезда</a>
+					 </li>
+					 <li class="footer-menu__list-item">
+						<a class="footer-menu__link" href="mailto:amisavto@mail.ru">amisavto@mail.ru</a>
+					 </li>
+				  </ul>
+				</nav>
 				
-			
-			 </div>
 		  
 		</div>
       </div>
-      <div class="footer__copyrigh">© 2009 – 2022 АМИС АВТО</div>
+     
+	</div> <div class="footer__copyrigh">© 2009 – 2022 АМИС АВТО</div>
     </footer>
 
     <!-- <script src="js.main.js"></script> -->

@@ -75,3 +75,8 @@ window.addEventListener("scroll", (e) => {
   if (pageYOffset > 1400) navbar.add(active_class, active_menu_link);
   else navbar.remove(active_class, active_menu_link);
 });
+
+$(".menu__btn").on("click", function () {
+  //   console.log("click");
+  $(".menu__list").toggleClass("menu__list--active");
+});
