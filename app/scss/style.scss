@@ -687,6 +687,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 320px 320px;
     gap: 50px 30px;
+    justify-items: center;
   }
 }
 
@@ -891,6 +892,13 @@
   .header__wrapper {
     padding: 5px 0;
   }
+
+  .services {
+    &__wrapper {
+      grid-template-columns: 1fr 1fr;
+      gap: 30px 20px;
+    }
+  }
 }
 @media (max-width: 910px) {
   .contacts-decor {
@@ -931,5 +939,12 @@
 @media (max-width: 800px) {
   .top__slider {
     display: none;
+  }
+}
+@media (max-width: 630px) {
+  .services {
+    &__wrapper {
+      grid-template-columns: 1fr;
+    }
   }
 }
