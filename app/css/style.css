@@ -480,6 +480,10 @@ button {
   background: rgb(101, 183, 100);
   z-index: 1;
 }
+.card__order--available {
+  background: rgb(101, 183, 100);
+  z-index: 1;
+}
 .card__img {
   background: url(../images/content/card-img.jpg) center no-repeat;
   background-size: contain;

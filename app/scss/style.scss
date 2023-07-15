@@ -225,22 +225,29 @@
 // Карточки
 .main {
   display: flex;
-  justify-content: space-around;
-  margin-top: 50px;
+ // justify-content: space-around;
+  margin-top: 30px;
 }
 
 .cards {
   &__wrapper {
-    display: flex;
-    justify-content: center;
+   /// display: flex;
+   // justify-content: center;
+    display: grid;
+    //place-items: center;
+    //gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     max-width: 900px;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     margin-bottom: 20px;
   }
 
   &__pagination {
     display: flex;
     justify-content: center;
+    margin-top: 100px;
+    
   }
 }
 
@@ -275,6 +282,10 @@
   }
   &__order--available {
     background: rgba(101, 183, 100, 1);
+    z-index: 1;
+  }
+  &__order--order {
+    background: rgb(114, 128, 252);
     z-index: 1;
   }
   &__img {
@@ -326,7 +337,7 @@
     border: 1px solid #f7f2f2;
     border-radius: 4px;
     margin: 15px 0;
-    width: 300px;
+    width: 100%;
   }
 
   .form-search {
@@ -372,13 +383,12 @@
 .category {
   &__title {
     @extend %font-text;
-    margin-bottom: 15px;
-    display: inline-block;
+   
     text-align: center;
     border: 2px solid #ff5f19;
     padding: 5px;
-    width: 255px;
-    margin-left: 20px;
+    width: 100%;
+    margin: 15px auto;
   }
   &__list {
     overflow-y: auto;
@@ -527,7 +537,7 @@
   color: #fff;
   border: none;
   padding: 5px 105px;
-  width: 258px;
+  
   transition: all 0.3 ease;
   &:hover {
     opacity: 0.8;
@@ -543,7 +553,7 @@
   border: 2px solid #ff5f19;
   padding: 5px 95px;
   margin: 0 auto;
-  width: 258px;
+  
   transition: all 0.3 ease;
   &:hover {
     background-color: #ff5f19;
@@ -552,7 +562,18 @@
 }
 // Форма обратной связи
 
-.send-form__title {
+.popup {
+  margin: 0 auto;
+  
+ 
+  &__inner{
+   padding: 10px;
+   margin: 15px auto;
+    max-width: 300px;
+  
+  }
+
+&__title {
   font-family: "Mali";
   font-style: normal;
   font-weight: 700;
@@ -564,8 +585,7 @@
   text-align: center;
   padding: 20px 10px;
 }
-.send-form {
-  margin: 20px;
+
 
   &__name,
   &__phone,
@@ -584,6 +604,7 @@
     letter-spacing: 0.05em;
     text-transform: uppercase;
     color: #5c5c5c;
+    
   }
 
   &__name::placeholder,
@@ -601,12 +622,54 @@
   border: 2px solid #ff5f19;
   padding: 5px 95px;
   margin: 0 auto;
-  width: 258px;
   transition: all 0.3 ease;
   &:hover {
     background-color: #ff5f19;
     color: #fff;
   }
+}
+.modal{
+  
+  background-color: #707070;
+  border-radius: 4px;
+  position: fixed;
+  width: 400px;
+  min-height: 30%;
+  top: 30%;
+  left: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  transition: all 0.8s ease;
+
+}
+.hidden{
+  display: none;
+}
+
+.close-popup{
+}
+.close-popup, 
+.modal::after{
+  position: absolute;
+  content: '+';
+  font-size: 24px;
+  font-weight: 600;
+  color: #e4e4e7;
+  top: 25px;
+  right: 15px;
+  z-index: 15;
+  transform: rotate(45deg);
+  cursor: pointer;
+  
+ }
+
+.modal.active{
+  display: block;
+ }
+.modal input.send-btn{
+  color: #d9d6d6;
 }
 // Конец формы обратной связи
 //  форма конец
@@ -618,6 +681,7 @@
   display: flex;
   justify-content: center;
 
+
   &__inner {
     display: flex;
     justify-content: center;
@@ -628,10 +692,22 @@
   }
   &__list-item {
     margin: 0 6px;
+    padding: 5px;
+    border: 1px solid #c2c1c1;
+    background-color: #d9d6d6;
+    border-radius: 2px;
   }
   &__arrow {
     margin: 0 6px;
+   
   }
+  &__arrow--left {
+    margin: 0 6px;
+    transform: rotate(20deg);
+   
+  }
+
+
   &__arrow--disabled {
     opacity: 0;
     pointer-events: none;
@@ -639,10 +715,11 @@
   &__list-num {
     font-weight: 600;
     font-size: 14px;
-    line-height: 28px;
+    line-height: 18px;
     color: #707070;
+    
   }
-  &__list-num--activ {
+  &__list-num--active {
     color: $color-decor;
     pointer-events: none;
   }
@@ -687,7 +764,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 320px 320px;
     gap: 50px 30px;
-    justify-items: center;
+    justify-self: center;
   }
 }
 
